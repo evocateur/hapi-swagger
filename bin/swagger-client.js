@@ -85,7 +85,12 @@ server.register([
     {
         register: HapiSwagger,
         options: swaggerOptions
-    }], (err) => {
+    }],
+    (err) => {
+
+        if (err) {
+            console.log(err);
+        }
 
         server.route([{
             method: 'PUT',
@@ -145,5 +150,3 @@ server.views({
     engines: { html: require('handlebars') },
     isCached: false
 });
-
-

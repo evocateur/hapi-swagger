@@ -145,7 +145,7 @@ const registerPlugins = function () {
 
 const registerViews = function () {
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
 
         server.views({
             path: 'bin',
@@ -192,4 +192,3 @@ registerBearer()
     .catch( (err) => {
         console.log(err);
     });
-

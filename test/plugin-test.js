@@ -43,8 +43,10 @@ lab.experiment('plugin', () => {
                 HapiSwagger
             ], function (err) {
 
+                expect(err).to.equal(undefined);
                 server.start(function (err) {
 
+                    expect(err).to.exist();
                     done();
                 });
             });
@@ -66,8 +68,10 @@ lab.experiment('plugin', () => {
                 HapiSwagger
             ], function (err) {
 
+                expect(err).to.equal(undefined);
                 server.start(function (err) {
 
+                    expect(err).to.exist();
                     done();
                 });
             });
@@ -89,6 +93,7 @@ lab.experiment('plugin', () => {
             HapiSwagger
         ], function (err) {
 
+            expect(err).to.equal(undefined);
             server.start(function (err) {
 
                 expect(err).to.equal(undefined);
